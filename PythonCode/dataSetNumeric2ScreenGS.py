@@ -27,8 +27,8 @@ import operator
 ###Getting the screenNames from the dataset,writing to a file and storing them in the dataSetScreenName dictionary
 
 dataSetScreenName = {}
-dataSetFile = open('sampleTweets2009-06.txt')#file that contains the data set are
-wfile = open('outputScreenNameTry.txt', 'w')
+dataSetFile = open('tweets2009-06.txt')#file that contains the data set are
+wfile = open('outputScreenName.txt', 'w')
 lineNum=0
 
 #just reads the 1000000 lines
@@ -69,11 +69,10 @@ wfile.close()
 dataSetFile.close()
 ############################################################################################## 
 #####################PUTTING TOGETHER SCREENNAME & USERID###################################	
-numeric2screenFile = open('sampleMyScreen2Name.txt')
-dataSetWithNumerID= open('outputDataSetWithNumberIDTry.txt','w')
-while numeric2screenFile and lineNum < 1000000:
-	#reading just the first 1000000 lines
-	lineNum+=1
+numeric2screenFile = open('numeric2screen')
+dataSetWithNumerID= open('outputDataSetWithNumberID.txt','w')
+while numeric2screenFile:
+	
 	#reads a line	
 	line = numeric2screenFile.readline()
     #Stop if line is empty
