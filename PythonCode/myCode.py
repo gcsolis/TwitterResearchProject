@@ -2,4 +2,5 @@
 c=2
 d=4
 
-print c+d
+print d-c
+print c*d
